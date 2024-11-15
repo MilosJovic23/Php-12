@@ -28,11 +28,11 @@
 
 
 
-    $imePorizvoda = $_POST["ime_proizvoda"];
-    $opis = $_POST["opis"];
-    $cena = $_POST["cena"];
-    $kolicina = $_POST["kolicina"];
-    $datumNabavke = $_POST["datum_nabavke"];
+    $imePorizvoda =  mysqli_real_escape_string( $baza,$_POST["ime_proizvoda"] );
+    $opis =  mysqli_real_escape_string( $baza,$_POST["opis"] );
+    $cena =  mysqli_real_escape_string( $baza,$_POST["cena"] );
+    $kolicina = mysqli_real_escape_string( $baza, $_POST["kolicina"] );
+    $datumNabavke = mysqli_real_escape_string( $baza,$_POST["datum_nabavke"] );
 
 
 

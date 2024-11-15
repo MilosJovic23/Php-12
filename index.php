@@ -12,14 +12,14 @@
 
 
 
-//    mysqli_query($baza,"INSERT INTO korisnici (email,lozinka,datumRodjenja) VALUES ('proba@gmail.com','123456','1994-04-22')");
 
 
-    $ime = "krompir";
-    $opis = "domaci krompir prve klase";
-    $cena = 100.22;
-    $datum_nabavke = "2000-03-02";
-    $kolicina = 4;
+
+    $ime =  mysqli_real_escape_string( $baza,"krompir");
+    $opis = mysqli_real_escape_string( $baza,"domaci krompir prve klase");
+    $cena = mysqli_real_escape_string( $baza,100.22);
+    $datum_nabavke = mysqli_real_escape_string( $baza,"2000-03-02");
+    $kolicina = mysqli_real_escape_string( $baza,4);
 
 
 
